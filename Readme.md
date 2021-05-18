@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Dmitrii Kubata](https://up.htmlacademy.ru/htmlcss/31/user/1205153).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Казаков](https://htmlacademy.ru/profile/id798257).
 
 ---
 
