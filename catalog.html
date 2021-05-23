@@ -7,29 +7,30 @@
   <body>
     <header>
         <nav>
-          <a>
+          <a href="index.html">
             <img src="img/index-logo.svg" width="160" height="60" alt="Логотип студии Nerds">
           </a>
           <ul>
             <li><a href="blank.html">Студия</a></li>
             <li><a href="blank.html">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
+            <li>Магазин</li>
             <li><a href="#contacts">Контакты</a></li>
           </ul>
           <a href="blank.html">Корзина</a>
         </nav>
     </header>
-      <main>
+    <main>
         <h1>Магазин готовых шаблонов</h1>
         <section>
             <h2>Фильтр товаров</h2>
             <form method="get" action="https://echo.htmlacademy.ru">
                 <fieldset>
                     <legend>стоимость</legend>
-                    <!-- не до конца понял как зявазать инпунты со значениями -->
                     <p><input type="range" min="0" max="1500"></p>
-                    от<input type="text" value="0">
-                    до<input type="text" value="1500">
+                    <label for="from">от</label>
+                    <input type="text" id="from" value="0">
+                    <label for="to">до</label>
+                    <input type="text" id="to" value="1500">
                 </fieldset>
                 <fieldset>
                     <legend>Сетка</legend>
@@ -153,8 +154,8 @@
                 </li>
               </ul>
         </section>
-      </main>
-      <footer>
+    </main>
+    <footer>
         <section>
           <h2>Контакты</h2>
             <!-- Здесь будет карта -->
@@ -182,24 +183,27 @@
           <p>Давайте дружить, это выгодно!</p>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </section>
-      </footer>
-      <div>
+    </footer>
+    <div>
         <form action="https://echo.htmlacademy.ru" method="post">
           <h2>Напишите нам</h2>
           <p>
-          <label for="your-name">Ваше имя:</label> <br>
-          <input id="your-name" type="text" name="name" placeholder="Имя Фамилия">
+            <label for="your-name">Ваше имя:</label>
+            <input id="your-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
           <p>
-          <label for="your-email">Ваш email:</label>  <br>
-          <input id="your-email" type="email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="your-message">Текст письма:</label>
-          <br>
-        <textarea id="your-message" type="text" name="message" placeholder="В свободной форме" rows="4" cols="50"></textarea>
-        </p>
-        <button type="submit">Отправить</button>
-          </form>
-      </div>
+            <label for="your-email">Ваш email:</label>
+            <input id="your-email" type="email" name="email" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="your-message">Текст письма:</label>
+            <textarea id="your-message" name="message" placeholder="В свободной форме" rows="4" cols="50"></textarea>
+          </p>
+            <button type="submit">Отправить</button>
+        </form>
+        <button>
+            <!--крестик, для закрытия попапа--> 
+        </button>
+    </div>
   </body>
+</html>
