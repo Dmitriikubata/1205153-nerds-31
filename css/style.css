@@ -1,0 +1,278 @@
+:root {
+    --basic-white: #FFFFFF;
+    --basic-extra-light: #EEEEEE;
+    --basic-light: #DFDFDF;
+    --basic-light-grey: #D5D5D5;
+    --basic-extra-grey: #D7DCDE;
+    --basic-light-dark: #B4B9BB;
+    --basic-grey: #4D4D4D;
+    --basic-black: #000000;
+    --basic-red: #FB565A;
+    --red-hover: #E74246;
+    --red-active: #D7373B;
+    --basic-green: #00CA74;
+    --green-hover: #00BC6C;
+    --green-active: #00AA62;
+    --basic-yellow: #EFC849;
+    --yellow-hover: #EAB534;
+    --yellow-active: #E5A722;
+}
+
+/* Global */
+
+.page-body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.page-body a {
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+.page-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Main navigation */
+
+.main-nav {
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: var(--basic-extra-light);
+}
+
+.navigation-list {
+    list-style: none;
+}
+
+
+/*  Slider */
+
+.main-slider-block {
+    background-color: var(--basic-extra-light);
+}
+
+.main-slider-block h1 {
+    margin: 0;
+}
+
+.main-slider-block h2{
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+}
+
+
+/* Advantages Block */
+
+.advantages-block li {
+    list-style: none;
+}
+
+.advantages-block h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.advantages-img-1 {
+    background-color: var(--basic-red);
+}
+
+.advantages-img-2 {
+    background-color: var(--basic-green);
+}
+
+.advantages-img-3 {
+    background-color: var(--basic-yellow);
+}
+
+/* About Block */
+
+.about-block h2 {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+}
+
+.about-title-list {
+    font-weight: 700;
+    text-transform: uppercase;  
+}
+
+.about-text-list {
+    list-style: none;
+}
+
+.about-numbers-title {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about-numbers-list {
+    list-style: none;
+}
+
+.about-numbers-list p:nth-of-type(2n+1) {
+    font-size: 45px;
+    line-height: 65px;
+    font-weight: 700;   
+}
+
+.about-numbers-list span {
+    vertical-align: super;
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 700;   
+}
+
+
+/* Portfolio */
+
+.portfolio-list {
+    list-style: none;
+}
+
+
+/* contacts */
+
+.contacts-title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contants-text {
+    line-height: 18px;
+}
+
+.map-img {
+    background-color: var(--basic-light);
+}
+
+
+/* Footer */
+
+.socials-list {
+    list-style: none;
+}
+
+.promo-title {
+    font-size: 36px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+
+/* PopUp */
+
+.popup-contact {
+    width: 960px;
+    height: 590px;
+    position: absolute;
+    background-color: var(--basic-white);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.popup-contact h2 {
+    font-size: 45px;
+    font-weight: 700;   
+}
+
+.popup-contact label {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700; 
+}
+
+.form-input {
+    border: 2px solid var(--basic-extra-grey);
+}
+
+.form-input::placeholder {
+    color: var(--basic-extra-grey);
+}
+
+.form-input:hover {
+    border: 2px solid var(--basic-light-dark);
+}
+
+.form-input:hover::placeholder {
+    color: var(--basic-light-dark);
+}
+
+.form-input:focus {
+    border: 2px solid var(--basic-black);
+}
+
+.form-input:focus::placeholder {
+    color: var(--basic-black);
+}
+
+
+
+
+/* Button */
+
+.button {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    border: none;
+}
+
+a.button,
+button.button {
+    color: var(--basic-white);  
+}
+
+
+.button-red {
+    background-color: var(--basic-red);
+}
+
+.button-red:hover {
+    background-color: var(--red-hover);
+}
+
+.button-red:active {
+    background-color: var(--red-active);
+}
+
+.button-green {
+    background-color: var(--basic-green);
+}
+
+.button-green:hover {
+    background-color: var(--green-hover);
+}
+
+.button-green:active {
+    background-color: var(--green-active);
+}
+
+.button-yellow {
+    background-color: var(--basic-yellow);
+}
+
+.button-yellow:hover {
+    background-color: var(--yellow-hover);
+}
+
+.button-yellow:active {
+    background-color: var(--yellow-active);
+}
+
