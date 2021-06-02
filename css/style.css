@@ -1,6 +1,7 @@
 :root {
     --basic-white: #FFFFFF;
     --basic-extra-light: #EEEEEE;
+    --additional-light: #E1E1E1;
     --basic-light: #DFDFDF;
     --basic-light-grey: #D5D5D5;
     --basic-extra-grey: #D7DCDE;
@@ -45,9 +46,10 @@
 
 /* Main navigation */
 
-.main-nav {
+.header {
     line-height: 30px;
     text-transform: uppercase;
+    font-weight: 500;
     background-color: var(--basic-extra-light);
 }
 
@@ -55,83 +57,102 @@
     list-style: none;
 }
 
+.navigation-list_item_link:hover,
+.navigation-bag:hover {
+    color: var(--basic-red);
+}
+
+.navigation-list_item_link:active,
+.navigation-bag:active {
+    color: var(--basic-black);   
+    opacity: 0.3;
+}
 
 /*  Slider */
 
-.main-slider-block {
+.main-block {
     background-color: var(--basic-extra-light);
 }
 
-.main-slider-block h1 {
-    margin: 0;
+.main-block h1 {
+    display: none;
 }
 
-.main-slider-block h2{
+.main-block h2{
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
+    margin-top: 0;
 }
 
 
 /* Advantages Block */
 
-.advantages-block li {
+.advantages h2 {
+    display: none;
+}
+
+.advantages li {
     list-style: none;
 }
 
-.advantages-block h3 {
+.advantages h3 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.advantages-img-1 {
+.advantages-block_item_img-1 {
     background-color: var(--basic-red);
 }
 
-.advantages-img-2 {
+.advantages-block_item_img-2 {
     background-color: var(--basic-green);
 }
 
-.advantages-img-3 {
+.advantages-block_item_img-3 {
     background-color: var(--basic-yellow);
 }
 
 /* About Block */
 
-.about-block h2 {
+.about h2 {
     font-size: 45px;
     line-height: 45px;
     font-weight: 500;
 }
 
-.about-title-list {
+.about-text-block_title {
     font-weight: 700;
     text-transform: uppercase;  
 }
 
-.about-text-list {
+.about-text-block_list {
     list-style: none;
 }
 
-.about-numbers-title {
+.numbers-block h2 {
+    display: none;
+}
+
+.numbers-block_title {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
 }
 
-.about-numbers-list {
+.numbers-block_list {
     list-style: none;
 }
 
-.about-numbers-list p:nth-of-type(2n+1) {
+.numbers-block_list p:nth-of-type(2n+1) {
     font-size: 45px;
     line-height: 65px;
     font-weight: 700;   
 }
 
-.about-numbers-list span {
+.numbers-block_list span {
     vertical-align: super;
     font-size: 26px;
     line-height: 40px;
@@ -141,41 +162,93 @@
 
 /* Portfolio */
 
+.portfolio-block h2 {
+ display: none;
+}
+
 .portfolio-list {
     list-style: none;
+}
+
+.portfolio-list_item_img {
+    opacity: 0.2;
+}
+
+.portfolio-list_item_img:hover {
+    opacity: 1;
+}
+
+.portfolio-list_item_img:active {
+    opacity: 0.1;
 }
 
 
 /* contacts */
 
-.contacts-title {
+.contacts-block h2 {
+    display: none;
+   }
+
+.contacts-info h3 {
+    display: none;
+   }
+.contacts-info_title {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.contants-text {
+.contacts-info_text {
     line-height: 18px;
 }
 
-.map-img {
+.contacts-map_map-img {
     background-color: var(--basic-light);
 }
 
 
 /* Footer */
 
+.socials h2 {
+    display: none;
+   }
+
 .socials-list {
     list-style: none;
 }
 
-.promo-title {
+.socials-list_link {
+    /* Здесь пока не разобрался как сделать нормально иконку внутри круга  */
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    background-color: var(--additional-light);
+}
+
+.socials-list_link:hover {
+    background-color: var(--red-hover);
+}
+
+.socials-list_link:active {
+    background-color: var(--red-active);
+}
+
+.footer-promo h2 {
+    display: none;
+   }
+
+.footer-promo_title {
     font-size: 36px;
     line-height: 30px;
     font-weight: 700;
 }
 
+.socials-list_link img:active {
+    opacity: 0.3;
+}
 
 /* PopUp */
 
@@ -198,27 +271,27 @@
     font-weight: 700; 
 }
 
-.form-input {
+.popup-contact-form_input {
     border: 2px solid var(--basic-extra-grey);
 }
 
-.form-input::placeholder {
+.popup-contact-form_input::placeholder {
     color: var(--basic-extra-grey);
 }
 
-.form-input:hover {
+.popup-contact-form_input:hover {
     border: 2px solid var(--basic-light-dark);
 }
 
-.form-input:hover::placeholder {
+.popup-contact-form_input:hover::placeholder {
     color: var(--basic-light-dark);
 }
 
-.form-input:focus {
+.popup-contact-form_input:focus {
     border: 2px solid var(--basic-black);
 }
 
-.form-input:focus::placeholder {
+.popup-contact-form_input:focus::placeholder {
     color: var(--basic-black);
 }
 
