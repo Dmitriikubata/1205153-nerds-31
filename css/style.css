@@ -207,6 +207,141 @@
     background-color: var(--basic-light);
 }
 
+/* CATALOG PAGE */
+.header-catalog_title {
+    background-color: var(--basic-extra-light);
+}
+
+.header-catalog_title h1 {
+font-size: 55px;
+line-height: 55px;
+font-weight: 500;
+margin-top: 0;
+text-align: center;
+}
+
+/* Filters */
+
+.filters h2 {
+    display: none;
+}
+
+.filter-form_range-fieldset,
+.filter-form_radio-fieldset,
+.filter-form_checkbox-fieldset {
+    border: none;
+}
+
+.filter-form_range-fieldset legend,
+.filter-form_radio-fieldset legend,
+.filter-form_checkbox-fieldset legend {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.filter-form_range-fieldset label {
+    text-transform: uppercase;
+    line-height: 22px;
+}
+
+.filter-form_radio-list label,
+.filter-form_checkbox-list label {
+    line-height: 20px;
+}
+
+.filter-form_radio-list li,
+.filter-form_checkbox-list li {
+    list-style: none;
+}
+
+/* Templates */
+
+.templates h2 {
+    display: none;
+}
+
+.template-sorting_title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase; 
+} 
+
+.templates-sorting_list li {
+    list-style: none;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase; 
+    opacity: 0.3;
+}
+
+.templates-sorting_list li:hover {
+    opacity: 0.6;
+}
+
+.templates-sorting_list li:active {
+    opacity: 1;
+}
+
+.templates-sorting_list .templates-sorting_list_active {
+    opacity: 1;
+}
+
+.templates-sorting-actions li {
+    list-style: none;
+}
+
+.templates-list_item {
+    list-style: none;
+}
+
+.templates-list_item_bottom-sheet {
+    background-color: var(--basic-extra-light);
+    width: 360px;
+    text-align: center;
+    /* display: none; */
+    /* пока не разобрался до конца как сделать, чтобы работал ховер на изображение */
+}
+
+.templates-list_item_img:hover .templates-list_item_bottom-sheet {
+    display: block;
+}
+
+.templates-list_item_bottom-sheet a:first-of-type {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase; 
+}
+
+.pagination li {
+    list-style: none;
+}
+
+.pagination_item a {
+    background-color: var(--basic-extra-light);
+    border-radius: 3px;
+}
+
+.pagination_item a:hover {
+    background-color: var(--basic-light);
+}
+
+.pagination_item a:active {
+    background-color: var(--basic-light-grey);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    opacity: 0.3;
+}
+
+.pagination_item-current a {
+    background-color: var(--basic-white);
+    border: 3px solid #DBDBDB;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
 
 /* Footer */
 
@@ -297,7 +432,6 @@
 
 
 
-
 /* Button */
 
 .button {
@@ -305,13 +439,13 @@
     line-height: 18px;
     font-weight: 500;
     border: none;
+    border-radius: 3px;
 }
 
 a.button,
 button.button {
     color: var(--basic-white);  
 }
-
 
 .button-red {
     background-color: var(--basic-red);
@@ -349,3 +483,18 @@ button.button {
     background-color: var(--yellow-active);
 }
 
+button.button_grey {
+    background-color: var(--basic-extra-light);
+    color: var(--basic-black);
+}
+
+button.button_grey:hover {
+    background-color: var(--basic-light);
+    color: var(--basic-black);
+}
+
+button.button_grey:active {
+    background-color: var(--basic-light-grey);
+    color: var(--basic-black);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
