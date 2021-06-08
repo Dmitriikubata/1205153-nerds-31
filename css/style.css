@@ -196,12 +196,19 @@
 
 .numbers-block_list {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 .numbers-block_list p:nth-of-type(2n+1) {
     font-size: 45px;
     line-height: 65px;
     font-weight: 700;   
+}
+
+.numbers-block_list p {
+    margin: 0;
 }
 
 .numbers-block_list span {
@@ -214,13 +221,27 @@
 
 /* Portfolio */
 
+.portfolio-block {
+    margin: 80px 0;
+}
+
 .portfolio-block h2 {
  display: none;
 }
 
 .portfolio-list {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    width: 1160px;
+    margin: 0 auto;
 }
+
+.portfolio-list_item {
+    justify-self: center;
+}
+
 
 .portfolio-list_item_img {
     opacity: 0.2;
@@ -272,16 +293,12 @@ margin-top: 0;
 text-align: center;
 }
 
-.inner-page {
+.catalog-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 1160px;
     padding: 0;
     margin: 0 auto;
-}
-
-.header-catalog_title {
-    grid-column: 1 / -1;
 }
 
 
@@ -364,19 +381,31 @@ text-align: center;
     list-style: none;
 }
 
+.templates-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    column-gap: 40px;
+}
+
+
 .templates-list_item {
     list-style: none;
+    position: relative;
+    margin-bottom: 30px;
 }
 
 .templates-list_item_bottom-sheet {
     background-color: var(--basic-extra-light);
-    width: 360px;
+    width: 358px;
     text-align: center;
-    /* display: none; */
-    /* пока не разобрался до конца как сделать, чтобы работал ховер на изображение */
+     display: none; 
+     position: absolute;
+     bottom: 0;
 }
 
-.templates-list_item_img:hover .templates-list_item_bottom-sheet {
+.templates-list_item_img:hover + .templates-list_item_bottom-sheet {
     display: block;
 }
 
@@ -461,6 +490,9 @@ text-align: center;
 
 .socials-list {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
 }
 
 .socials-list_link {
@@ -471,6 +503,7 @@ text-align: center;
     display: block;
     text-align: center;
     background-color: var(--additional-light);
+    margin: 0;
 }
 
 .socials-list_link:hover {
