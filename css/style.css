@@ -59,30 +59,33 @@
     background-color: var(--basic-extra-light);
 }
 
+.header_logo {
+margin-top: 49px;
+}
+
 .header {
     line-height: 30px;
     text-transform: uppercase;
     font-weight: 500;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     width: 1160px;
-    margin: 50px auto 0;
+    margin: 0 auto;
     padding: 0 10px;
     column-gap: 20px;
 }
 
 .navigation-list {
     list-style: none;
-    margin: 0;
+    margin: 75px 0;
     padding: 0;
-}
-
-.navigation {
-    justify-self: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 .navigation-bag {
     justify-self: end;
+    margin: 75px 0;
 }
 
 .navigation-list_item_link:hover,
@@ -350,12 +353,29 @@ text-align: center;
     margin: 0;
 }
 
+.template-sorting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 42px;
+    margin-bottom: 50px;
+}
+
 .template-sorting_title {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase; 
+    grid-column: 1 / 2;
 } 
+
+.templates-sorting_list {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-start;
+}
 
 .templates-sorting_list li {
     list-style: none;
@@ -363,6 +383,7 @@ text-align: center;
     line-height: 18px;
     text-transform: uppercase; 
     opacity: 0.3;
+    margin-right: 25px;
 }
 
 .templates-sorting_list li:hover {
@@ -377,6 +398,15 @@ text-align: center;
     opacity: 1;
 }
 
+.templates-sorting-actions {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .templates-sorting-actions li {
     list-style: none;
 }
@@ -386,7 +416,7 @@ text-align: center;
     grid-template-columns: 1fr 1fr;
     padding: 0;
     margin: 0;
-    column-gap: 40px;
+    column-gap: 42px;
 }
 
 
@@ -416,8 +446,18 @@ text-align: center;
     text-transform: uppercase; 
 }
 
+.pagination {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
 .pagination li {
     list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    background-color: var(--basic-extra-light);
 }
 
 .pagination_item a {
