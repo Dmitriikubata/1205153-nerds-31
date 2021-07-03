@@ -17,17 +17,19 @@
   <header class="header-background">
     <nav class="header">
       <a class="header_logo" href="index.html">
-        <img src="img/nerds_logo.svg" width="160" height="60" alt="Логотип студии Nerds">
+        <img src="img/nerds_logo.svg" width="160" height="65" alt="Логотип студии Nerds">
       </a>
       <div class="navigation">
         <ul class="navigation-list">
           <li class="navigation-list_item"><a href="blank.html" class="navigation-list_item_link">Студия</a></li>
           <li class="navigation-list_item"><a href="blank.html" class="navigation-list_item_link">Клиенты</a></li>
-          <li>Магазин</li>
+          <li class="navigation-list_item-current">Магазин</li>
           <li class="navigation-list_item"><a href="#contacts" class="navigation-list_item_link">Контакты</a></li>
         </ul>
       </div>
-      <a href="blank.html" class="navigation-bag">Корзина</a>
+      <div class="navigation-bag">
+        <a href="blank.html" class="navigation-bag_link">Корзина</a>
+      </div>
     </nav>
   </header>
   <main class="container">
@@ -36,30 +38,48 @@
     </section>
     <div class="catalog-grid">
       <section class="filters">
-        <h2>Фильтр товаров</h2>
+        <h2 class="visually-hidden">Фильтр товаров</h2>
         <form method="get" action="https://echo.htmlacademy.ru" class="filters-form">
-          <fieldset class="filter-form_range-fieldset">
-            <legend>стоимость</legend>
-            <p><input type="range" min="0" max="1500" class="filter-form_range"></p>
-            <label for="from">от</label>
-            <input type="text" id="from" value="0" class="filter-form_range-input">
-            <label for="to">до</label>
-            <input type="text" id="to" value="1500" class="filter-form_range-input">
-          </fieldset>
+          <fieldset class="filter-item">
+            <legend>Стоимость:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="
+                    width: 30%;
+                    margin-left: 20%
+                  "></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="
+                  left: 20%
+                "></div>
+                <div class="toggle toggle-max" tabindex="0" style="
+                  left: 50%
+                "></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000">
+                </label>
+              </div>
+            </div>
+        </fieldset>
           <fieldset class="filter-form_radio-fieldset">
             <legend>Сетка</legend>
             <ul class="filter-form_radio-list">
               <li>
-                <input type="radio" name="setka" id="filter-adaptive" value="adap" checked
-                  class="filter-form_radio-input">
+                <input type="radio" name="setka" id="filter-adaptive" value="adap" checked class="filter-form_radio-input visually-hidden">
                 <label for="filter-adaptive">Адаптивная</label>
               </li>
               <li>
-                <input type="radio" name="setka" id="filter-fixed" value="fix" class="filter-form_radio-input">
+                <input type="radio" name="setka" id="filter-fixed" value="fix" class="filter-form_radio-input visually-hidden">
                 <label for="filter-fixed">Фиксированная</label>
               </li>
               <li>
-                <input type="radio" name="setka" id="filter-rezina" value="rez" class="filter-form_radio-input">
+                <input type="radio" name="setka" id="filter-rezina" value="rez" class="filter-form_radio-input visually-hidden">
                 <label for="filter-rezina">Резиновая</label>
               </li>
             </ul>
@@ -68,23 +88,23 @@
             <legend>Особенности</legend>
             <ul class="filter-form_checkbox-list">
               <li>
-                <input type="checkbox" name="slider" id="filter-slider" checked class="filter-form_checkbox-input">
+                <input type="checkbox" name="slider" id="filter-slider" checked class="filter-form_checkbox-input visually-hidden">
                 <label for="filter-slider">Слайдер</label>
               </li>
               <li>
-                <input type="checkbox" name="block-adv" id="filter-block-adv" class="filter-form_checkbox-input">
+                <input type="checkbox" name="block-adv" id="filter-block-adv" class="filter-form_checkbox-input visually-hidden">
                 <label for="filter-block-adv">Блок преимуществ</label>
               </li>
               <li>
-                <input type="checkbox" name="news" id="filter-news" checked class="filter-form_checkbox-input">
+                <input type="checkbox" name="news" id="filter-news" checked class="filter-form_checkbox-input visually-hidden">
                 <label for="filter-news">Новости</label>
               </li>
               <li>
-                <input type="checkbox" name="gallery" id="filter-gallery" class="filter-form_checkbox-input">
+                <input type="checkbox" name="gallery" id="filter-gallery" class="filter-form_checkbox-input visually-hidden">
                 <label for="filter-gallery">Галерея</label>
               </li>
               <li>
-                <input type="checkbox" name="bag" id="filter-bag" class="filter-form_checkbox-input">
+                <input type="checkbox" name="bag" id="filter-bag" class="filter-form_checkbox-input visually-hidden">
                 <label for="filter-bag">Корзина</label>
               </li>
             </ul>
@@ -93,22 +113,26 @@
         </form>
       </section>
       <section class="templates">
-        <h2>Список готовых шаблонов</h2>
+        <h2 class="visually-hidden">Список готовых шаблонов</h2>
         <div class="template-sorting">
           <p class="template-sorting_title">Сортировать:</p>
-          <ul class="templates-sorting_list">
-            <li class="templates-sorting_list_active">По цене</li>
-            <li>По типу</li>
-            <li>По названию</li>
-          </ul>
-          <ul class="templates-sorting-actions">
-            <li><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="sort-down"></li>
-            <li><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="sort-up"></li>
-          </ul>
+          <div  class="templates-sorting-buttons">
+            <ul class="templates-sorting_list">
+              <li class="templates-sorting_list_active">По цене</li>
+              <li>По типу</li>
+              <li>По названию</li>
+            </ul>
+            <ul class="templates-sorting-actions">
+              <li class="templates-sorting-actions_down-dir"><img src="img/icon-down-dir.svg" width="11" height="10"
+                  alt="sort-down"></li>
+              <li class="templates-sorting-actions_up-dir"><img src="img/icon-up-dir.svg" width="11" height="10"
+                  alt="sort-up"></li>
+            </ul>
+          </div>
         </div>
         <ul class="templates-list">
           <li class="templates-list_item">
-            <img src="img/templates/sedona_template.png" width="358" height="578" alt="Шаблон Sedona"
+            <img src="img/templates/sedona_template.png" width="360" height="578" alt="Шаблон Sedona"
               class="templates-list_item_img">
             <div class="templates-list_item_bottom-sheet">
               <a href="#">Sedona</a>
@@ -117,7 +141,7 @@
             </div>
           </li>
           <li class="templates-list_item">
-            <img src="img/templates/pink_template.png" width="358" height="578" alt="Шаблон Pink"
+            <img src="img/templates/pink_template.png" width="360" height="578" alt="Шаблон Pink"
               class="templates-list_item_img">
             <div class="templates-list_item_bottom-sheet">
               <a href="#">Pink App</a>
@@ -126,7 +150,7 @@
             </div>
           </li>
           <li class="templates-list_item">
-            <img src="img/templates/borod_template.png" width="358" height="578" alt="Шаблон Barbershop"
+            <img src="img/templates/borod_template.png" width="360" height="578" alt="Шаблон Barbershop"
               class="templates-list_item_img">
             <div class="templates-list_item_bottom-sheet">
               <a href="#">Barbershop</a>
@@ -135,7 +159,7 @@
             </div>
           </li>
           <li class="templates-list_item">
-            <img src="img/templates/mishka_template.png" width="358" height="578" alt="Шаблон Mishka"
+            <img src="img/templates/mishka_template.png" width="360" height="578" alt="Шаблон Mishka"
               class="templates-list_item_img">
             <div class="templates-list_item_bottom-sheet">
               <a href="#">MISHKA</a>
@@ -144,7 +168,7 @@
             </div>
           </li>
           <li class="templates-list_item">
-            <img src="img/templates/aplus_template.png" width="358" height="578" alt="Шаблон A Plus"
+            <img src="img/templates/aplus_template.png" width="360" height="578" alt="Шаблон A Plus"
               class="templates-list_item_img">
             <div class="templates-list_item_bottom-sheet">
               <a href="#">A Plus</a>
@@ -153,7 +177,7 @@
             </div>
           </li>
           <li class="templates-list_item">
-            <img src="img/templates/kvast_template.png" width="358" height="578" alt="Шаблон КВАСТ"
+            <img src="img/templates/kvast_template.png" width="360" height="578" alt="Шаблон КВАСТ"
               class="templates-list_item_img">
             <div class="templates-list_item_bottom-sheet">
               <a href="#">КВАСТ</a>
@@ -163,7 +187,7 @@
           </li>
         </ul>
         <ul class="pagination">
-          <li class="pagination_item-current">
+          <li class="pagination_item pagination_item-current">
             <a>1</a>
           </li>
           <li class="pagination_item">
@@ -181,7 +205,7 @@
   </main>
   <footer class="footer">
     <section class="contacts-block">
-      <h2>Контакты</h2>
+      <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts-map">
         <img src="img/map-marker.png" width="231" height="190" alt="Место студии Nerds на карте"
           class="contact-map_marker">
@@ -190,27 +214,27 @@
       </div>
       <div class="contacts-info">
         <div class="contacts-info-content">
-          <h3> Как связаться</h3>
+          <h3 class="visually-hidden"> Как связаться</h3>
           <p class="contacts-info_title">NЁRDS DESIGN STUDIO</p>
           <p class="contacts-info_text">
             наб. Реки Карповки, <br>
             5 лит П, Санкт-Петербург <br>
-          <p>
-            <a href="tel:+78005558628" class="contacts-info_tel">+7 800 555-86-28</a>
+          <p class="contacts-info_tel">
+            <a href="tel:+78005558628" class="contacts-info_tel-number">+7 800 555-86-28</a>
           </p>
-          <a href="#" class="contacts-info_button button button-red">НАПИШИТЕ НАМ</a>
+          <a href="#" class="button button-red contacts-info_button">НАПИШИТЕ НАМ</a>
         </div>
       </div>
     </section>
     <div class="sub-footer">
       <section class="socials">
-        <h2>Социальные сети</h2>
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="socials-list">
           <li><a href="#" class="socials-list_link">
               <img src="img/icons/vk-icon.svg" width="26" height="15" alt="социальная сеть Вконтакте">
             </a></li>
           <li><a href="#" class="socials-list_link">
-              <img src="img/icons/fb-icon.svg" width="22" height="12" alt="социальная сеть Facebook">
+              <img src="img/icons/fb-icon.svg" width="12" height="22" alt="социальная сеть Facebook">
             </a></li>
           <li><a href="#" class="socials-list_link">
               <img src="img/icons/insta-icon.svg" width="21" height="21" alt="социальная сеть Instagram">
@@ -218,33 +242,33 @@
         </ul>
       </section>
       <section class="footer-promo">
-        <h2>Акция</h2>
+        <h2 class="visually-hidden">Акция</h2>
         <p class="footer-promo_title">Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <p class="footer-promo_text">Скидка 10% для друзей из социальных сетей.</p>
       </section>
     </div>
   </footer>
   <div class="popup-contact">
     <h2>Напишите нам</h2>
     <form action="https://echo.htmlacademy.ru" method="post" class="popup-contact-form">
-      <p>
+      <p class="popup-contact-form_item-1">
         <label for="your-name" class="popup-contact-form_label">Ваше имя:</label>
         <input id="your-name" type="text" name="name" placeholder="Имя Фамилия" class="popup-contact-form_input">
       </p>
-      <p>
+      <p class="popup-contact-form_item-2">
         <label for="your-email" class="popup-contact-form_label">Ваш email:</label>
         <input id="your-email" type="email" name="email" placeholder="email@example.com"
           class="popup-contact-form_input">
       </p>
-      <p>
+      <p class="popup-contact-form_item-3">
         <label for="your-message" class="popup-contact-form_label">Текст письма:</label>
         <textarea id="your-message" name="message" placeholder="В свободной форме" rows="4" cols="50"
-          class="popup-contact-form_input"></textarea>
+          class="popup-contact-form_input popup-contact-form_textarea"></textarea>
       </p>
-      <button type="submit" class="button button-red">ОТПРАВИТЬ</button>
+      <button type="submit" class="button button-red wide-button">ОТПРАВИТЬ</button>
     </form>
     <button class="close-popup">
-      <!--крестик, для закрытия попапа-->
+      <img class="close-popup_img" src="img/close-cross.svg" alt="кнопка для закрытия попапа" width="21" height="21">
     </button>
   </div>
 </body>

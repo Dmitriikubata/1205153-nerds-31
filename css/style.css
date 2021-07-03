@@ -7,6 +7,7 @@
     --basic-extra-grey: #D7DCDE;
     --additional-grey: #C1C1C1;
     --basic-light-dark: #B4B9BB;
+    --additional-light-grey: #F2F2F2;
     --basic-grey: #4D4D4D;
     --basic-dark-grey: #444444;
     --additional-dark-grey: #666666;
@@ -115,6 +116,11 @@
     position: relative;
 }
 
+.navigation-list_item_link {
+    padding-top: 5px;
+    padding-bottom: 6px;
+}
+
 .navigation-list_item-current::after {
     content: "";
     position: absolute;
@@ -131,11 +137,10 @@
 }
 
 .navigation-bag_link {
-    display: block;
-    padding: 0;
     padding-left: 30px;
     position: relative;
-
+    padding-top: 5px;
+    padding-bottom: 6px;
 }
 
 .navigation-bag_link::before {
@@ -184,7 +189,14 @@
 .slider {
     margin: 0;
     padding: 0;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.slider-controls-wrap {
     position: relative;
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .slider-item {
@@ -207,8 +219,8 @@
 .slider-controls {
     position: absolute;
     display: flex;
-    top: 431px;
-    left: 679px;
+    top: -114px;
+    left: 525px;
     z-index: 20;
     padding: 0;
     margin: 0;
@@ -432,9 +444,9 @@
     background-image: url("../img/portfolio-divider.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
-    top: 10;
+    top: 50%;
+    transform: translate(0, -50%);
     left: 250px;
-    /* пока не могу понять как сделать высоту одинаковой для разделителей */
 }
 
 .portfolio-list_item_img {
@@ -478,6 +490,9 @@ line-height: 55px;
 font-weight: 500;
 margin-top: 0;
 text-align: center;
+margin-bottom: 55px;
+padding-top: 78px;
+padding-bottom: 108px;
 }
 
 .catalog-grid {
@@ -492,13 +507,99 @@ text-align: center;
 
 /* Filters */
 
-.filter-form_range-fieldset,
+.filter-item {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  .range-filter {
+    width: 260px;
+    margin-top: 49px;
+  }
+  
+  .filter-item legend {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .range-controls {
+    position: relative;
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+  }
+  
+  .range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+  }
+  
+  .range-controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    cursor: pointer;
+  }
+  
+  .range-controls .toggle-min {
+    left: 18px;
+  }
+  
+  .range-controls .toggle-max {
+    left: 160px;
+  }
+  
+  .price-controls {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .price-controls label {
+    text-transform: uppercase;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+  }
+  
+  .price-controls input {
+    width: 60px;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
 .filter-form_radio-fieldset,
 .filter-form_checkbox-fieldset {
     border: none;
+    margin: 0;
+    padding: 0;
 }
 
-.filter-form_range-fieldset legend,
 .filter-form_radio-fieldset legend,
 .filter-form_checkbox-fieldset legend {
     font-size: 18px;
@@ -507,15 +608,100 @@ text-align: center;
     text-transform: uppercase;
 }
 
-.filter-form_range-fieldset label {
-    text-transform: uppercase;
-    line-height: 22px;
+.filter-form_radio-fieldset {
+    margin-top: 54px;
 }
+
+.filter-form_checkbox-fieldset {
+    margin-top: 27px;
+}
+
+.filter-form_radio-list,
+.filter-form_checkbox-list {
+    padding-left: 36px;
+    margin: 0;
+    margin-top: 16px;
+}
+
+.filter-form_radio-list li,
+.filter-form_checkbox-list li {
+    margin-bottom: 20px;
+}
+
 
 .filter-form_radio-list label,
 .filter-form_checkbox-list label {
     line-height: 20px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
 }
+
+.filter-form_radio-input + label::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: -2px;
+    width: 25px;
+    height: 25px;
+    border: 4px solid var(--basic-grey);
+    opacity: 0.4;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  .filter-form_radio-input:checked + label::after {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    background-color: var(--basic-grey);
+    opacity: 0.4;
+    border-radius: 50%;
+  }
+
+  .filter-form_checkbox-input + label::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: -2px;
+    width: 25px;
+    height: 23px;
+    background-image: url("../img/checkbox-off.svg");
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .filter-form_checkbox-input:checked + label::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: -2px;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/checkbox-on.svg");
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .filter-form_radio-input:checked:hover + label::after,
+  .filter-form_radio-input:hover + label::before,
+  .filter-form_checkbox-input:checked:hover + label::before,
+  .filter-form_checkbox-input:hover + label::before {
+    opacity: 1;
+  }
+
+  .filter-form_radio-input:disabled + label::before,
+  .filter-form_checkbox-input:disabled + label::before,
+  .filter-form_radio-input:disabled + label,
+  .filter-form_checkbox-input:disabled + label {
+    opacity: 0.1;
+  }
 
 .filter-form_radio-list li,
 .filter-form_checkbox-list li {
@@ -532,7 +718,7 @@ text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 42px;
-    margin-bottom: 50px;
+    margin-bottom: 88px;
 }
 
 .template-sorting_title {
@@ -543,13 +729,20 @@ text-align: center;
     grid-column: 1 / 2;
 } 
 
+.templates-sorting-buttons {
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2;  
+    display: flex;
+    justify-content: space-between;
+}
+
 .templates-sorting_list {
     margin: 0;
     padding: 0;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 296px;
 }
 
 .templates-sorting_list li {
@@ -579,8 +772,6 @@ text-align: center;
 .templates-sorting-actions {
     margin: 0;
     padding: 0;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
     display: flex;
     justify-content: flex-end;
 }
@@ -611,53 +802,114 @@ text-align: center;
     padding: 0;
     margin: 0;
     column-gap: 42px;
+    row-gap: 71px;
 }
 
 
 .templates-list_item {
     list-style: none;
     position: relative;
-    margin-bottom: 30px;
+}
+
+.templates-list_item::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 360px;
+    background: url("../img/browser.svg") no-repeat 0 0;
+    top: -40px;
+    opacity: 0.12;
+}
+
+.templates-list_item_img {
+    border: 1px solid var(--additional-light-grey);
+    box-sizing: border-box;
 }
 
 .templates-list_item_bottom-sheet {
     background-color: var(--basic-extra-light);
-    width: 358px;
+    width: 360px;
     text-align: center;
-     display: none; 
-     position: absolute;
-     bottom: 0;
+    display: none; 
+    position: absolute;
+    bottom: 0;
+    padding-top: 26px;
+    padding-bottom: 44px;
 }
 
-.templates-list_item_img:hover + .templates-list_item_bottom-sheet {
+.templates-list_item:hover .templates-list_item_bottom-sheet {
     display: block;
+}
+
+.templates-list_item:hover.templates-list_item::before {
+    opacity: 1;
+}
+
+.templates-list_item:hover .templates-list_item_img {
+    border: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 .templates-list_item_bottom-sheet a:first-of-type {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
-    text-transform: uppercase; 
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.templates-list_item_bottom-sheet p {
+    padding: 0;
+    margin-top: 7px;
+    margin-bottom: 32px;
+    line-height: 18px;
+    color: var(--additional-dark-grey);
+}
+
+.templates-list_item_bottom-sheet a:first-child:hover {
+    color: var(--basic-red);
+}
+
+.templates-list_item_bottom-sheet a:first-child:active {
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .pagination {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    margin-top: 55px;
     margin-bottom: 50px;
 }
 
 .pagination li {
     list-style: none;
-    margin: 0 10px;
+    margin: 0;
+    margin-right: 11px;
     padding: 0;
-    background-color: var(--basic-extra-light);
 }
 
 .pagination_item a {
     background-color: var(--basic-extra-light);
     border-radius: 3px;
+    display: block;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
 }
+
+.pagination_item:last-of-type a {
+    padding-right: 77px;
+    padding-left: 77px;
+}
+
 
 .pagination_item a:hover {
     background-color: var(--basic-light);
@@ -670,10 +922,18 @@ text-align: center;
 }
 
 .pagination_item-current a {
+    display: block;
     background-color: var(--basic-white);
-    border: 3px solid #DBDBDB;
     box-sizing: border-box;
+    border: 3px solid #DBDBDB;
     border-radius: 3px;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    padding-left: 17px;
+    padding-right: 17px;
 }
 
 
@@ -683,6 +943,9 @@ text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .contact-map_marker {
@@ -698,15 +961,14 @@ text-align: center;
 }
 
 .contacts-info {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
     background-color: var(--basic-white);
     width: 320px;
     height: 310px;
-    margin-left: 140px;
     align-self: center;
     padding: 0;
-    position: relative;
+    position: absolute;
+    top: 54px; 
+    left: 140px;
 }
 
 .contacts-info-content {
@@ -792,9 +1054,10 @@ p .contacts-info_tel-number {
     height: 590px;
     background-color: var(--basic-white);
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-    position: absolute;
-    left: 240px;
-    top: 1706px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: none;
 }
 
@@ -883,7 +1146,6 @@ p .contacts-info_tel-number {
 .close-popup {
     border: none;
     background: transparent;
-    position: relative;
     width: 21px;
     height: 21px;
 
@@ -892,8 +1154,8 @@ p .contacts-info_tel-number {
 .close-popup_img {
     position: absolute;
     opacity: 0.3;
-    bottom: 435px;
-    left: 850px;
+    top: 80px;
+    right: 90px;
     width: 21px;
     height: 21px;
 }
@@ -939,6 +1201,16 @@ button.button {
 
 .contacts-info_button {
     width: 219px;
+}
+
+.filter-form_button {
+    width: 260px;
+    margin-top: 30px;
+}
+
+.templates-list_item_button {
+    width: 200px;
+    margin: 0 auto;
 }
 
 .button-red {
