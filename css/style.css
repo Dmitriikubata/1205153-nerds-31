@@ -1040,6 +1040,8 @@ padding-bottom: 108px;
 
 .contacts-map iframe {
     border: none;
+    position: relative;
+    width: 100%;
 }
 
 .contacts-info {
