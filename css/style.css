@@ -1181,7 +1181,7 @@ p .contacts-info_tel-number {
 .popup-contact-form_item-3 {
     grid-column: 1 / -1;
     margin: 0;
-    margin-bottom: 47px;
+    margin-bottom: 38px;
 }
 
 .popup-contact-form label {
@@ -1199,7 +1199,7 @@ p .contacts-info_tel-number {
     border: 2px solid var(--basic-extra-grey);
     border-radius: 3px;
     width: 326px;
-    padding: 16px 14px 16px 16px;
+    padding: 12px 17px 14px 14px;
 }
 
 .popup-contact-form_input::placeholder {
@@ -1271,7 +1271,7 @@ p .contacts-info_tel-number {
 }
 
 .wide-button {
-    width: 256px;
+    width: 259px;
 }
 
 .slider-button {
