@@ -250,7 +250,7 @@
     padding: 0;
     width: 18px;
     height: 18px;
-    background-color: #FFFFFF;
+    background-color: var(--basic-white);
     border-radius: 50%;
     cursor: pointer;
     margin: 0;
@@ -1021,7 +1021,6 @@ padding-bottom: 108px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    width: 1440px;
     margin: 0 auto;
     position: relative;
 }
@@ -1051,8 +1050,8 @@ padding-bottom: 108px;
     align-self: center;
     padding: 0;
     position: absolute;
-    top: 54px; 
-    left: 140px;
+    top: 53px;
+    left: calc(50% + -580px);
 }
 
 .contacts-info-content {
@@ -1093,7 +1092,6 @@ p .contacts-info_tel-number {
     padding: 0;
 }
 
-
 .socials-list_link {
     width: 81px;
     height: 81px;
@@ -1118,7 +1116,6 @@ p .contacts-info_tel-number {
 .socials-list_link:active > img {
     opacity: 0.3;
 }
-
 
 .footer-promo_title {
     font-size: 36px;
@@ -1147,8 +1144,11 @@ p .contacts-info_tel-number {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: none;
     z-index: 40;
+}
+
+.popup-contact_hidden {
+    display: none;
 }
 
 .popup-contact-form {

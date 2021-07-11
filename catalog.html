@@ -262,22 +262,22 @@
       </section>
     </div>
   </footer>
-  <div class="popup-contact">
+  <div class="popup-contact popup-contact_hidden">
     <h2>Напишите нам</h2>
     <form action="https://echo.htmlacademy.ru" method="post" class="popup-contact-form">
       <p class="popup-contact-form_item-1">
         <label for="your-name" class="popup-contact-form_label">Ваше имя:</label>
-        <input id="your-name" type="text" name="name" placeholder="Имя Фамилия" class="popup-contact-form_input">
+        <input id="your-name" type="text" name="name" placeholder="Имя Фамилия" class="popup-contact-form_input" required>
       </p>
       <p class="popup-contact-form_item-2">
         <label for="your-email" class="popup-contact-form_label">Ваш email:</label>
         <input id="your-email" type="email" name="email" placeholder="email@example.com"
-          class="popup-contact-form_input">
+          class="popup-contact-form_input" required>
       </p>
       <p class="popup-contact-form_item-3">
         <label for="your-message" class="popup-contact-form_label">Текст письма:</label>
-        <textarea id="your-message" name="message" placeholder="В свободной форме" rows="4" cols="50"
-          class="popup-contact-form_input popup-contact-form_textarea"></textarea>
+        <textarea id="your-message" name="message" placeholder="В свободной форме" rows="5" cols="50"
+          class="popup-contact-form_input popup-contact-form_textarea" required></textarea>
       </p>
       <button type="submit" class="button button-red wide-button">ОТПРАВИТЬ</button>
     </form>
@@ -285,6 +285,7 @@
       <img class="close-popup_img" src="img/close-cross.svg" alt="кнопка для закрытия попапа" width="21" height="21">
     </button>
   </div>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>

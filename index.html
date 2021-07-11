@@ -36,7 +36,7 @@
     <section class="main-block">
       <h1 class="visually-hidden">дизайн-студия Nerds</h1>
       <ul class="slider">
-        <li class="slider-item slider-item_hidden slider-item_current">
+        <li class="slider-item slider-item_hidden slider-item_current slide-1">
           <div class="slider_content">
             <h2>Долго, дорого, <br> скрупулезно.</h2>
             <p>
@@ -46,7 +46,7 @@
           </div>
           <img src="img/main_slider_1.png" class="main-slide-img" width="760" height="431" alt="прототипы телефонов">
         </li>
-        <li class="slider-item slider-item_hidden">
+        <li class="slider-item slider-item_hidden slide-2">
           <div class="slider_content">
             <h2>Любим математику <br> как никто другой</h2>
             <p>
@@ -56,7 +56,7 @@
           </div>
           <img src="img/main_slider_2.png" class="main-slide-img" width="760" height="431" alt="прототипы mac">
         </li>
-        <li class="slider-item slider-item_hidden">
+        <li class="slider-item slider-item_hidden slide-3">
           <div class="slider_content">
             <h2>Только ночь, <br> только хардкор</h2>
             <p>
@@ -70,9 +70,9 @@
       </ul>
       <div class="slider-controls-wrap">
         <div class="slider-controls">
-          <button class="slider-controls_current" type="button" aria-label="Первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
+          <button class="slider-controls_current slider-control-1" type="button" aria-label="Первый слайд"></button>
+          <button class="slider-control-2" type="button" aria-label="Второй слайд"></button>
+          <button class="slider-control-3" type="button" aria-label="Третий слайд"></button>
         </div>
       </div>
     </section>
@@ -137,7 +137,7 @@
     <section class="portfolio-block">
       <h2 class="visually-hidden">Портфолио</h2>
       <ul class="portfolio-list">
-        <li class="portfolio-list_item"><a href="https://htmlacademy.ru/"><img src="img/logo_htmlacademy.png"
+        <li class="portfolio-list_item"><a href="https://htmlacademy.ru/intensive/htmlcss/"><img src="img/logo_htmlacademy.png"
               width="199" height="57" alt="Логотип HTMLacademy" class="portfolio-list_item_img"></a>
         </li>
         <li class="portfolio-list_item">
@@ -207,22 +207,22 @@
       </section>
     </div>
   </footer>
-  <div class="popup-contact">
+  <div class="popup-contact popup-contact_hidden">
     <h2>Напишите нам</h2>
     <form action="https://echo.htmlacademy.ru" method="post" class="popup-contact-form">
       <p class="popup-contact-form_item-1">
         <label for="your-name" class="popup-contact-form_label">Ваше имя:</label>
-        <input id="your-name" type="text" name="name" placeholder="Имя Фамилия" class="popup-contact-form_input">
+        <input id="your-name" type="text" name="name" placeholder="Имя Фамилия" class="popup-contact-form_input" required>
       </p>
       <p class="popup-contact-form_item-2">
         <label for="your-email" class="popup-contact-form_label">Ваш email:</label>
         <input id="your-email" type="email" name="email" placeholder="email@example.com"
-          class="popup-contact-form_input">
+          class="popup-contact-form_input" required>
       </p>
       <p class="popup-contact-form_item-3">
         <label for="your-message" class="popup-contact-form_label">Текст письма:</label>
         <textarea id="your-message" name="message" placeholder="В свободной форме" rows="5" cols="50"
-          class="popup-contact-form_input popup-contact-form_textarea"></textarea>
+          class="popup-contact-form_input popup-contact-form_textarea" required></textarea>
       </p>
       <button type="submit" class="button button-red wide-button">ОТПРАВИТЬ</button>
     </form>
@@ -230,6 +230,8 @@
       <img class="close-popup_img" src="img/close-cross.svg" alt="кнопка для закрытия попапа" width="21" height="21">
     </button>
   </div>
+  <script src="js/popup.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 
 </html>
