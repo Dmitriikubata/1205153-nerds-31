@@ -546,10 +546,6 @@
     line-height: 18px;
 }
 
-.contacts-map_map-img {
-    background-color: var(--basic-light);
-}
-
 /* CATALOG PAGE */
 .header-catalog_title {
     background-color: var(--basic-extra-light);
@@ -1033,7 +1029,8 @@ margin-right: auto;
 .contact-map_marker {
     position: absolute;
     top: 70px;
-    left: 847px; 
+    left: calc(50% + 127px);
+    z-index: 25;
 }
 
 .contacts-map {
@@ -1042,10 +1039,21 @@ margin-right: auto;
     position: relative;
 }
 
-.contacts-map iframe {
+.contacts-block .contacts-map_map-img {
+    background-color: var(--basic-light);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    height: 416px;
+}
+
+.contacts-block iframe {
     border: none;
     position: relative;
     width: 100%;
+    z-index: 30;
 }
 
 .contacts-info {
@@ -1057,6 +1065,7 @@ margin-right: auto;
     position: absolute;
     top: 53px;
     left: calc(50% + -580px);
+    z-index: 40;
 }
 
 .contacts-info-content {

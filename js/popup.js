@@ -57,7 +57,6 @@ close_popup.addEventListener('click', function(evt) {
 popup_form.addEventListener('submit', function(evt) {
     if (!popup_name.value || !popup_email.value) {
         evt.preventDefault();
-        console.log('Нужно ввести имя и email');
     } else {
         if (isStorageSupport) {
         localStorage.setItem('namename', popup_name.value);
