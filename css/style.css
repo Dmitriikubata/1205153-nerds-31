@@ -3,6 +3,10 @@
     --basic-extra-light: #EEEEEE;
     --additional-light: #E1E1E1;
     --basic-light: #DFDFDF;
+    --add-light-white: #DBDBDB;
+    --add-extra-white: #cfcfcf;
+    --add-white: #f1f1f1;
+    --add-grey: #ababab;
     --basic-light-grey: #D5D5D5;
     --basic-extra-grey: #D7DCDE;
     --additional-grey: #C1C1C1;
@@ -12,6 +16,7 @@
     --basic-dark-grey: #444444;
     --additional-dark-grey: #666666;
     --additional-text-grey: #283136;
+    --add-dark-grey: #283136;
     --basic-black: #000000;
     --basic-red: #FB565A;
     --red-hover: #E74246;
@@ -93,11 +98,6 @@
     margin: 0 auto;
     padding: 0;
     column-gap: 20px;
-}
-
-.navigation {
-    margin: 0;
-    padding: 0;
 }
 
 .navigation-list {
@@ -564,6 +564,9 @@ text-align: center;
 margin-bottom: 55px;
 padding-top: 78px;
 padding-bottom: 108px;
+width: 1160px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .catalog-grid {
@@ -604,19 +607,19 @@ padding-bottom: 108px;
     padding-top: 39px;
     padding-right: 20px;
     padding-left: 20px;
-    background-color: #f1f1f1;
+    background-color: var(--add-white);
     border-radius: 5px;
   }
   
   .range-controls .scale {
     height: 2px;
-    background: #d7dcde;
+    background: var(--basic-extra-grey);
   }
   
   .range-controls .bar {
     width: 70%;
     height: 2px;
-    background: #00ca74;
+    background: var(--basic-green);
   }
   
   .range-controls .toggle {
@@ -626,10 +629,10 @@ padding-bottom: 108px;
     width: 4px;
     height: 4px;
     padding: 0;
-    border: 8px solid #ffffff;
-    background-color: #ababab;
+    border: 8px solid var(--basic-white);
+    background-color: var(--add-grey);
     border-radius: 50%;
-    box-shadow: 0 2px 1px 0 #cfcfcf;
+    box-shadow: 0 2px 1px 0 var(--add-extra-white);
     cursor: pointer;
   }
   
@@ -657,10 +660,10 @@ padding-bottom: 108px;
     padding: 10px;
     margin-left: 10px;
     text-align: center;
-    color: #283136;
+    color: var(--additional-text-grey);
     border: none;
     border-radius: 5px;
-    background: #f1f1f1;
+    background: var(--add-white);
     font-family: inherit;
     font-size: inherit;
   }
@@ -901,7 +904,7 @@ padding-bottom: 108px;
 
 .templates-list_item_bottom-sheet {
     background-color: var(--basic-extra-light);
-    width: 360px;
+    width: 330px;
     text-align: center;
     display: none; 
     position: absolute;
@@ -909,6 +912,8 @@ padding-bottom: 108px;
     padding-top: 26px;
     padding-bottom: 44px;
     transform: translate(0, -6px);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .templates-list_item:hover .templates-list_item_bottom-sheet {
@@ -1003,7 +1008,7 @@ padding-bottom: 108px;
     display: block;
     background-color: var(--basic-white);
     box-sizing: border-box;
-    border: 3px solid #DBDBDB;
+    border: 3px solid var(--add-light-white);
     border-radius: 3px;
     line-height: 18px;
     font-size: 16px;
@@ -1069,8 +1074,10 @@ padding-bottom: 108px;
     margin-bottom: 18px;
 }
 
-.contacts-info_tel {
-    margin-bottom: 34px;
+.contacts-info_tel-number {
+    margin-bottom: 37px;
+    margin-top: 20px;
+    display: block;
 }
 
 .contacts-info_text,
@@ -1090,6 +1097,8 @@ p .contacts-info_tel-number {
     display: flex;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    margin-top: 61px;
 }
 
 .socials-list_link {
@@ -1102,7 +1111,7 @@ p .contacts-info_tel-number {
     background-color: var(--additional-light);
     margin: 0;
     margin-right: 9px;
-    margin-top: 61px;
+    margin-bottom: 10px;
 }
 
 .socials-list_link:hover {
