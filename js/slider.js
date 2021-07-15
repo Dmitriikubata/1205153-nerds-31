@@ -6,7 +6,6 @@ const slider_control_1 = main_block.querySelector('.slider-control-1');
 const slider_control_2 = main_block.querySelector('.slider-control-2');
 const slider_control_3 = main_block.querySelector('.slider-control-3');
 
-
 slider_control_1.addEventListener('click', function(evt) {
     evt.preventDefault();
     slide_2.classList.remove('slider-item-current');

@@ -10,13 +10,13 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
   <header class="header-background">
     <nav class="header">
-      <a class="header-logo" href="index.html" aria-label="link to homepage">
+      <a class="header-logo" href="index.html" aria-label="ссылка на главную страницу">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Nerds">
       </a>
       <ul class="navigation-list">
@@ -48,10 +48,10 @@
                     margin-left: 20%
                   "></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="
+                <div class="toggle toggle-min" tabindex="0" aria-label="левый ползунок минимальной стоимости" style="
                   left: 20%
                 "></div>
-                <div class="toggle toggle-max" tabindex="0" style="
+                <div class="toggle toggle-max" tabindex="0" aria-label="правый ползунок минимальной стоимости" style="
                   left: 50%
                 "></div>
               </div>
@@ -123,9 +123,9 @@
           <p class="template-sorting-title">Сортировать:</p>
           <div class="templates-sorting-buttons">
             <ul class="templates-sorting-list">
-              <li class="templates-sorting-list-active">По цене</li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По названию</a></li>
+              <li class="templates-sorting-list-active templates-sorting-list-item">По цене</li>
+              <li class="templates-sorting-list-item"><a href="#">По типу</a></li>
+              <li class="templates-sorting-list-item"><a href="#">По названию</a></li>
             </ul>
             <ul class="templates-sorting-actions">
               <li class="templates-sorting-actions-down-dir"><img src="img/icon-down-dir.svg" width="11" height="10"
@@ -242,13 +242,13 @@
       <section class="socials">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="socials-list">
-          <li><a href="#" class="socials-list-link" aria-label="link to VK">
+          <li><a href="#" class="socials-list-link" aria-label="ссылка на социальную сеть Вконтакте">
               <img src="img/icons/vk-icon.svg" width="26" height="15" alt="социальная сеть Вконтакте">
             </a></li>
-          <li><a href="#" class="socials-list-link" aria-label="link to Facebook">
+          <li><a href="#" class="socials-list-link" aria-label="ссылка на социальную сеть Фейсбук">
               <img src="img/icons/fb-icon.svg" width="12" height="22" alt="социальная сеть Facebook">
             </a></li>
-          <li><a href="#" class="socials-list-link" aria-label="link to Instagram">
+          <li><a href="#" class="socials-list-link" aria-label="ссылка на социальную сеть Инстаграм">
               <img src="img/icons/insta-icon.svg" width="21" height="21" alt="социальная сеть Instagram">
             </a></li>
         </ul>
@@ -283,7 +283,7 @@
       <img class="close-popup-img" src="img/close-cross.svg" alt="кнопка для закрытия попапа" width="21" height="21">
     </button>
   </div>
-  <script src="js/popup.js"></script>
+  <script src="js/popup.min.js"></script>
 </body>
 
 </html>
