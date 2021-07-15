@@ -9,30 +9,30 @@ const slider_control_3 = main_block.querySelector('.slider-control-3');
 
 slider_control_1.addEventListener('click', function(evt) {
     evt.preventDefault();
-    slide_2.classList.remove('slider-item_current');
-    slide_3.classList.remove('slider-item_current');
-    slide_1.classList.add('slider-item_current');
-    slider_control_2.classList.remove('slider-controls_current');
-    slider_control_3.classList.remove('slider-controls_current');
-    slider_control_1.classList.add('slider-controls_current');
+    slide_2.classList.remove('slider-item-current');
+    slide_3.classList.remove('slider-item-current');
+    slide_1.classList.add('slider-item-current');
+    slider_control_2.classList.remove('slider-controls-current');
+    slider_control_3.classList.remove('slider-controls-current');
+    slider_control_1.classList.add('slider-controls-current');
 });
 
 slider_control_2.addEventListener('click', function(evt) {
     evt.preventDefault();
-    slide_1.classList.remove('slider-item_current');
-    slide_3.classList.remove('slider-item_current');
-    slide_2.classList.add('slider-item_current');
-    slider_control_1.classList.remove('slider-controls_current');
-    slider_control_3.classList.remove('slider-controls_current');
-    slider_control_2.classList.add('slider-controls_current');
+    slide_1.classList.remove('slider-item-current');
+    slide_3.classList.remove('slider-item-current');
+    slide_2.classList.add('slider-item-current');
+    slider_control_1.classList.remove('slider-controls-current');
+    slider_control_3.classList.remove('slider-controls-current');
+    slider_control_2.classList.add('slider-controls-current');
 });
 
 slider_control_3.addEventListener('click', function(evt) {
     evt.preventDefault();
-    slide_1.classList.remove('slider-item_current');
-    slide_2.classList.remove('slider-item_current');
-    slide_3.classList.add('slider-item_current');
-    slider_control_1.classList.remove('slider-controls_current');
-    slider_control_2.classList.remove('slider-controls_current');
-    slider_control_3.classList.add('slider-controls_current');
+    slide_1.classList.remove('slider-item-current');
+    slide_2.classList.remove('slider-item-current');
+    slide_3.classList.add('slider-item-current');
+    slider_control_1.classList.remove('slider-controls-current');
+    slider_control_2.classList.remove('slider-controls-current');
+    slider_control_3.classList.add('slider-controls-current');
 });
